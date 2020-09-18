@@ -16,7 +16,7 @@ services:
       - './phabricator_data:/bitnami'
       - './my_vhost.conf:/opt/bitnami/apache/conf/vhosts/my_vhost.conf'
     environment:
-      - PHABRICATOR_HOST=172.16.22.122
+      - PHABRICATOR_HOST=172.16.23.165
       - PHABRICATOR_USERNAME=admin
       - PHABRICATOR_PASSWORD=Abc123456
 
