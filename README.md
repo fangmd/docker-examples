@@ -5,7 +5,6 @@
 
 nginx 静态站点
 
-
 ## phabricator
 
 项目管理工具
@@ -25,3 +24,9 @@ docker run --name global-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=double -d mys
 ## YApi-X
 
 Api 管理工具
+
+## redis
+
+```
+docker run --name global-redis -d -p 6379:6379 redis
+```
