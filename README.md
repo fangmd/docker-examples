@@ -27,6 +27,4 @@ Api 管理工具
 
 ## redis
 
-```
-docker run --name global-redis -d -p 6379:6379 redis
-```
+内存数据库
