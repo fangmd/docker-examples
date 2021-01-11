@@ -3,3 +3,6 @@
 phabricator_data
 mariadb_data
 data
+
+
+*.log

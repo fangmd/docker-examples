@@ -6,7 +6,6 @@
 docker run --name global-redis -d -p 6379:6379 redis
 ```
 
-
 ## redis cil
 
 ```
