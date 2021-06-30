@@ -5,6 +5,10 @@
 
 nginx 静态站点
 
+## nginx-spa
+
+nginx spa 应用配置
+
 ## phabricator
 
 项目管理工具

@@ -1,0 +1,17 @@
+version: '2'
+services:
+  nginx:
+    image: nginx:stable-alpine
+    restart: always
+    # network_mode: host
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d/
+      - ./nginx/logs:/var/log/nginx
+      # spa 文件映射
+      - /Users/double/projects/react-ts-template/build/:/web/spa/build/
+    ports:
+      - 9002:9002
+    # environment:
+    #   - NGINX_HOST=your.domain
+    #   - NGINX_PORT=80
