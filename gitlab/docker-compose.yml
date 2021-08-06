@@ -1,0 +1,18 @@
+version: "3"
+services:
+  gitlab-service:
+    image: "gitlab/gitlab-ce:latest"
+    restart: always
+    hostname: "127.0.0.1"
+    environment:
+        GITLAB_OMNIBUS_CONFIG: |
+          external_url 'https://127.0.0.1'
+    ports:
+      - "9000:80"
+      - "9443:443"
+      - "9022:22"
+    volumes:
+      - "/Users/double/soft/gitlab-data/config:/etc/gitlab"
+      - "/Users/double/soft/gitlab-data/logs:/var/log/gitlab"
+      - "/Users/double/soft/gitlab-data/data:/var/opt/gitlab"
+
