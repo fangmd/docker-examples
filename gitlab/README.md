@@ -18,11 +18,21 @@ gitlab_rails['time_zone'] = 'Asia/Shanghai'
 ### GitLab Shell settings for GitLab
 gitlab_rails['gitlab_shell_ssh_port'] = 9022
 
+puma['worker_processes'] = 2
+
 # 本地测试用，优化内存占用
-postgresql['shared_buffers'] = "256MB"
+postgresql['shared_buffers'] = "512MB"
 postgresql['max_connections'] = 200
 prometheus_monitoring['enable'] = false
-puma['worker_processes'] = 2
+
+```
+
+gitlab 更新配置&重启
+
+```
+gitlab-ctl reconfigure
+
+gitlab-ctl restart
 ```
 
 # 使用镜像启动

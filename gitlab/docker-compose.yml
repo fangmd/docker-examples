@@ -4,9 +4,9 @@ services:
     image: "gitlab/gitlab-ce:latest"
     restart: always
     hostname: "127.0.0.1"
-    environment:
-        GITLAB_OMNIBUS_CONFIG: |
-          external_url 'https://127.0.0.1'
+    # environment:
+        # GITLAB_OMNIBUS_CONFIG: |
+        #   external_url 'https://127.0.0.1'
     ports:
       - "9000:80"
       - "9443:443"

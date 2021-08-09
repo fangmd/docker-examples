@@ -46,17 +46,24 @@ docker restart gitlab
 
 # 网络
 
-查看 docker 所有网络:
+1. 查看 docker 所有网络:
 
 ```
 docker network ls
 ```
 
-创建自定义网络:
+2. 创建自定义网络:
 
 ```
 docker network create --subnet=172.20.0.0/16 centos-network
 ```
+
+3. 访问宿主机网络
+
+```
+使用 host.docker.internal 代替 127.0.0.1
+```
+
 
 # 容器
 
@@ -64,4 +71,19 @@ docker network create --subnet=172.20.0.0/16 centos-network
 
 ```
 docker exec -it [container_name] /bin/bash
+```
+
+2. 进入容器，使用 root 用户
+
+```
+docker exec -u 0 -it [container_name] bash
+docker exec -u 0 -it 4199bbe484ba bash
+```
+
+# 日志
+
+时时查看日志：
+
+```
+docker logs --tail 1000 -f [container_name]
 ```
