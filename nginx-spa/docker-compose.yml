@@ -9,9 +9,11 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d/
       - ./nginx/logs:/var/log/nginx
       # spa 文件映射
-      - /Users/double/projects/react-ts-template/build/:/web/spa/build/
+      # - /Users/double/projects/react-ts-template/build/:/web/spa/build/
+      # - /Users/double/projects/express-template/:/web/spa/build/
+      - /Users/double/work/yt/project/tech-wiki/build/:/web/spa/build/
     ports:
-      - 9002:9002
+      - 9003:9003
     # environment:
     #   - NGINX_HOST=your.domain
     #   - NGINX_PORT=80

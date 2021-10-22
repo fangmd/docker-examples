@@ -10,6 +10,8 @@ docker-compose up -d
 
 # 配置：
 
+`.../gitlab/data/config/gitlab.rb`
+
 ```
 external_url 'http://127.0.0.1'
 

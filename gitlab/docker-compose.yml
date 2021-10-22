@@ -3,10 +3,13 @@ services:
   gitlab-service:
     image: "gitlab/gitlab-ce:latest"
     restart: always
-    hostname: "127.0.0.1"
-    # environment:
-        # GITLAB_OMNIBUS_CONFIG: |
-        #   external_url 'https://127.0.0.1'
+    hostname: "192.168.79.8"
+    environment:
+      TZ: 'Asia/Shanghai'
+      GITLAB_OMNIBUS_CONFIG: |
+          external_url 'http://192.168.79.8'
+          nginx['listen_port'] = 80
+          gitlab_rails['gitlab_shell_ssh_port'] = 9022
     ports:
       - "9000:80"
       - "9443:443"

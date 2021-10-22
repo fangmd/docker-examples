@@ -1,0 +1,23 @@
+version: "3"
+services:
+  local-mongodb:
+    image: mongo
+    restart: always
+    hostname: "127.0.0.1"
+    container_name: local-mongodb
+    # command: --config /etc/mongo/mongod.conf
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGODB_USERNAME=admin
+      - MONGODB_PASSWORD=admin
+      - MONGODB_DATABASE=admin
+    ports:
+      - 27017:27017
+    volumes:
+      # 挂载数据目录
+      - /Users/double/docker-column/local-mongodb/db:/data/db
+      # 挂载日志目录
+      - /Users/double/docker-column/local-mongodb/log:/var/log/mongodb
+      # 挂载配置目录
+      - /Users/double/docker-column/local-mongodb/config:/etc/mongo
