@@ -3,7 +3,7 @@ services:
   local-mongodb:
     image: mongo
     restart: always
-    hostname: "127.0.0.1"
+    hostname: "0.0.0.0"
     container_name: local-mongodb
     # command: --config /etc/mongo/mongod.conf
     environment:
