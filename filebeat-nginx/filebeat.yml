@@ -1,0 +1,23 @@
+# /etc/filebeat/filebeat.yml
+
+# 配置filebeat自身的运行日志输出
+logging.level: info
+logging.to_files: true
+logging.files:
+  path: /var/log/filebeat
+  name: filebeat
+  keepfiles: 7
+
+# filebeat对日志的采集和输出配置
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+   - /var/log/nginx/access.log
+
+setup.template.settings:
+  index.number_of_shards: 1
+
+output.logstash:
+  # 这里输入的是logstash的地址和端口，后面我们会对logstash进行联调
+  hosts: ["0.0.0.0:5044"]

@@ -15,7 +15,7 @@ services:
       # - /Users/double/work/yt/project/shanhai_multishop/dist/:/web/spa/build/
       # shanhai_station
       # - /Users/double/work/yt/project/shanhai_station/unpackage/dist/build/h5/:/web/spa/build/
-      - /Users/double/work/yt/project/sh-travel-h5/build/:/web/spa/build/
+      - /Users/double/work/zy/projects/trend_mall_miniapp/dist/h5/:/web/spa/build/
     ports:
       - 9003:9003
     # environment:
