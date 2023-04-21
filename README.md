@@ -19,12 +19,6 @@ nginx spa 应用配置
 docker run -p 3001:8080 --name=jenkins-init jenkins/jenkins
 ```
 
-## mysql
-
-```
-docker run --name global-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=double -d mysql:latest
-```
-
 ## YApi-X
 
 Api 管理工具

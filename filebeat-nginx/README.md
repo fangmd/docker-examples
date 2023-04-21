@@ -19,5 +19,13 @@ docker run -d \
 -v /Users/double/projects/docker-examples/filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml \
 -v /Users/double/projects/express-template/logs:/var/log/filebeat/ \
 docker.elastic.co/beats/filebeat:8.0.0 filebeat
+
+
+docker run -d \
+--name=filebeat-nginx \
+-v /root/filebeat-nginx/filebeat.yml:/usr/share/filebeat/filebeat.yml \
+-v /var/log/nginx:/var/log/filebeat/ \
+docker.elastic.co/beats/filebeat:8.0.0 filebeat
 ```
+
 

@@ -10,12 +10,15 @@ services:
       - ./nginx/logs:/var/log/nginx
       # spa 文件映射
       # - /Users/double/projects/react-ts-template/build/:/web/spa/build/
+      # - /Users/double/work/qisi/project/company-screen/fe/build/:/web/spa/build/
+      - /Users/double/work/qisi/project/weekly-report-web/dist/:/web/spa/build/
       # - /Users/double/projects/express-template/:/web/spa/build/
       # - /Users/double/work/yt/project/cms-base/frontend/build/:/web/spa/build/
       # - /Users/double/work/yt/project/shanhai_multishop/dist/:/web/spa/build/
       # shanhai_station
       # - /Users/double/work/yt/project/shanhai_station/unpackage/dist/build/h5/:/web/spa/build/
-      - /Users/double/work/zy/projects/trend_mall_miniapp/dist/h5/:/web/spa/build/
+      # - /Users/double/work/zy/projects/trend_mall_miniapp/dist/h5/:/web/spa/build/
+      # - /Users/double/projects/react-admin-template/build/:/web/spa/build/
     ports:
       - 9003:9003
     # environment:
