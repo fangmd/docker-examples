@@ -1,0 +1,16 @@
+version: "2"
+services:
+  nginx:
+    image: nginx:stable-alpine
+    restart: always
+    # network_mode: host
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/logs:/var/log/nginx
+      - /Users/double/projects/docker-examples/nginx-test/nginx/www:/web/spa/build/
+    ports:
+      - 9003:9003
+    # environment:
+    #   - NGINX_HOST=your.domain
+    #   - NGINX_PORT=80
