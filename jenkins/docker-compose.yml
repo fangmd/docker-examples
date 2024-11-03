@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  jenkins:
+    image: jenkins/jenkins:2.473-jdk17
+    container_name: mjenkins
+    ports:
+      - "9080:8080"
+      - "50000:50000"
+    volumes:
+      - "/Users/fang/jenkins:/var/jenkins_home"
+    restart: unless-stopped
