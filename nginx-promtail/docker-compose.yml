@@ -16,8 +16,11 @@ services:
 
   promtail:
     image: grafana/promtail:2.9.2
+    ports:
+      - 9080:9080
     volumes:
       - ./nginx/logs:/var/log
+      - ./promtail:/etc/promtail
     command: -config.file=/etc/promtail/config.yml
-    networks:
-      - host
+    # networks:
+    #   - host
