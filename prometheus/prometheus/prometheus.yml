@@ -21,4 +21,4 @@ scrape_configs:
       # prometheus
       - targets: ["localhost:9090"]
       # prometheus-nginx-exporter
-      - targets: ["localhost:9113"]
+      - targets: ["host.docker.internal:9113"]
