@@ -21,7 +21,7 @@ scrape_configs:
       # prometheus
       - targets: ["localhost:9090"]
 
-  - job_name: nginx
+  - job_name: "nginx"
     scrape_interval: 5s
     static_configs:
       # prometheus-nginx-exporter
