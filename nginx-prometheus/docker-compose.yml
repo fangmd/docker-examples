@@ -10,7 +10,7 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d/
       - ./nginx/logs:/var/log/nginx
     ports:
-      - 9090:80
+      - 9114:80
     networks:
       - localhost
 
@@ -24,7 +24,7 @@ services:
       - ./nginx/logs:/var/log
       - ./promtail:/etc/promtail
     command: 
-      - -nginx.scrape-uri=http://nginx/stub_status
+      - -nginx.scrape-uri=http://localhost:9114/stub_status
     networks:
       - localhost
 
