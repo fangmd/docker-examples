@@ -1,0 +1,19 @@
+version: '2'
+services:
+  prometheus:
+    image: prom/prometheus:v2.45.2
+    user: root
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus/data:/prometheus
+    container_name: prometheus
+    restart: always
+    networks:
+      - localhost
+    ports:
+      - 9090:9090
+
+networks:
+    localhost:
+        name: localhost
+        external: false
