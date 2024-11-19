@@ -20,7 +20,7 @@ services:
     ports:
       - 9113:9113
     command: 
-      - -nginx.scrape-uri=http://localhost:9114/stub_status
+      - -nginx.scrape-uri=http://host.docker.internal:9114/stub_status
     networks:
       - localhost
 
