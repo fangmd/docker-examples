@@ -2,7 +2,6 @@ version: '2'
 services:
   nginx:
     build: ./nginx
-    image: vts-nginx:last
     container_name: prometheus-nginx-vts
     restart: always
     volumes:
