@@ -4,7 +4,6 @@ services:
     image: nginx:stable-alpine
     container_name: prometheus-nginx
     restart: always
-    # network_mode: host
     volumes:
       - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf.d:/etc/nginx/conf.d/
@@ -20,9 +19,6 @@ services:
     restart: always
     ports:
       - 9113:9113
-    volumes:
-      - ./nginx/logs:/var/log
-      - ./promtail:/etc/promtail
     command: 
       - -nginx.scrape-uri=http://localhost:9114/stub_status
     networks:
